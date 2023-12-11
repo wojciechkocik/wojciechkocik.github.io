@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Wojciech Kocik - In code we trust</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Wojciech Kocik">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    </link>
+    <link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.2/dist/terminal.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+
+<body class="terminal">
+    <div class="container">
+        <div class="terminal-nav">
+            <header class="terminal-logo">
+                <div class="logo terminal-prompt"><a href="/" class="no-style">Wojciech Kocik - Software
+                        Engineer</a></div>
+            </header>
+
+            {% include navigation.html %}
+
+
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="components components-grid">
+            <main>
+                <hr>
+                {{ content }}
+            </main>
+        </div>
+    </div>
+    <hr>
+
+    <footer style="text-align: center;">
+
+        © {{ site.time | date: '%Y' }} Wojciech Kocik
+
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/wojciech-kocik-290a9778" title="Linkedin Wojciech Kocik" target="_blank"
+                class="fa fa-linkedin fa-2x"></a>
+            <a href="https://github.com/wojciechkocik" title="Github Wojciech Kocik" ><i class="fa fa-github fa-2x"></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>
