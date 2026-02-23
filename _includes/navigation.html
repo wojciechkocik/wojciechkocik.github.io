@@ -2,7 +2,9 @@
     <ul>
         {% for item in site.data.navigation %}
         <li>
-            <a href="{{ item.link }}" {% if page.url==item.link %}class="menu-item active" {% else %} class="menu-item"
+            <a href="{{ item.link }}" 
+                {% if item.newTab %}target="_blank" rel="noopener noreferrer"{% endif %}
+                {% if page.url==item.link %}class="menu-item active" {% else %} class="menu-item"
                 {% endif %}><span>{{ item.name }}</span></a>
             <meta property="position">
         </li>

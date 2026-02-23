@@ -4,3 +4,6 @@
   link: /skills.html
 - name: Experience
   link: /experience.html
+- name: LinkedIn
+  link: https://www.linkedin.com/in/wojciech-kocik-290a9778/
+  newTab: true
