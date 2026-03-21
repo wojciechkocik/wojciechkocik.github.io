@@ -1,4 +1,6 @@
 .idea
+.DS_Store
+AGENTS.md
 _site
 .sass-cache
 .jekyll-cache

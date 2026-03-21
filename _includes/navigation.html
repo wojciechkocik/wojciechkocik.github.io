@@ -1,12 +1,14 @@
-<nav class="terminal-menu">
-    <ul>
+<nav class="site-nav" aria-label="Main navigation">
+    <ul class="site-nav__list">
         {% for item in site.data.navigation %}
         <li>
-            <a href="{{ item.link }}" 
+            <a
+                href="{{ item.link }}"
+                class="site-nav__link{% if page.url == item.link %} is-active{% endif %}"
                 {% if item.newTab %}target="_blank" rel="noopener noreferrer"{% endif %}
-                {% if page.url==item.link %}class="menu-item active" {% else %} class="menu-item"
-                {% endif %}><span>{{ item.name }}</span></a>
-            <meta property="position">
+            >
+                {{ item.name }}
+            </a>
         </li>
         {% endfor %}
     </ul>
