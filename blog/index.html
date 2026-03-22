@@ -1,0 +1,20 @@
+---
+layout: default
+title: Wojciech Kocik - Blog
+description: Notes on backend engineering, cloud platforms, delivery, and practical software development.
+---
+<section class="surface">
+    <div class="blog-list">
+        {% for post in site.posts %}
+        <article class="blog-card">
+            {% if post.header_image %}
+            <img src="{{ post.header_image }}" alt="{{ post.header_image_alt | default: post.title }}" class="blog-card__image">
+            {% endif %}
+            <p class="blog-card__meta">{{ post.date | date: "%B %-d, %Y" }}</p>
+            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            <p>{{ post.description | default: post.excerpt | strip_html | truncate: 180 }}</p>
+            <a class="blog-card__link" href="{{ post.url }}">Read post</a>
+        </article>
+        {% endfor %}
+    </div>
+</section>
